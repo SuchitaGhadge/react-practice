@@ -3,6 +3,7 @@ import Child from "./Child";
 function App() {
 const [counter, setCounter] = useState(0)
 const [userName, setUserName] = useState("")
+let multiplyByFive = counter * 5
 const removeValue = () =>{
   if(counter > 0){
     setCounter(counter-1)
@@ -11,7 +12,16 @@ const removeValue = () =>{
 
 const addCounter = () => {
   if(counter < 5){
-    setCounter(counter+1)
+    setCounter(prevCounter => prevCounter + 1)
+    // setCounter((prevCounter) => prevCounter + 1)
+    // setCounter((prevCounter) => prevCounter + 1)
+    // setCounter((prevCounter) => prevCounter + 1)
+    // setCounter((prevCounter) => prevCounter + 1)
+    // setCounter((prevCounter) => prevCounter + 1)
+    // setCounter((prevCounter) => prevCounter + 1)
+    // setCounter((prevCounter) => prevCounter + 1)
+    // setCounter((prevCounter) => prevCounter + 1)
+    // setCounter((prevCounter) => prevCounter + 1)
   }
 }
 
@@ -23,6 +33,8 @@ function getUserName (user)  {
     <>
     <h1>Coffee and React</h1>
     <h2>Counter value here: {counter}</h2>
+    <h2>Double value here: {counter * 2}</h2>
+    <h2>Multiply by 5 here: {multiplyByFive}</h2>
     <button onClick={addCounter}>Add value</button>
     <button onClick={removeValue}>Remove value</button>
     <br />
